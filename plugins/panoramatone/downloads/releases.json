@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "version": "0.1.0",
+    "date": "2026-02-11",
+    "assets": {
+      "linux_vst3": "Panoramatone_Linux_VST3_v0.1.0.zip"
+    },
+    "sha256": {
+      "Panoramatone_Linux_VST3_v0.1.0.zip": "66cc4779466d042777cf6bd38e474c498879eb9c1d0086b79eca2df247c2cafb"
+    },
+    "notes": "Initial release of Sunbunny Panoramatone \u2014 analog-style pitch vibrato that adds lush vintage shimmer and organic movement to any sound."
+  }
+]
