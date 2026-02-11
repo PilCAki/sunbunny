@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation — Sunbunny Panoramatone</title>
+  <link rel="icon" href="../../../assets/headshot.png" type="image/png">
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../../index.html" class="logo-link">
+        <img src="../../../assets/headshot.png" alt="Sunbunny" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="install.html">Install</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="troubleshooting.html">Help</a>
+        <a href="../index.html#downloads" class="nav-cta">Download</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="doc-page">
+    <a href="../index.html" class="back-link">&larr; Back to Panoramatone</a>
+    <h1>Installation Guide</h1>
+    <p>Sunbunny Panoramatone is distributed as a <strong>VST3 plugin</strong>.
+       Download the zip for your platform, extract it, and copy the plugin to
+       the correct folder.</p>
+
+    <!-- ── Windows ──────────────────────────────────────────────────────── -->
+    <h2>&oplus; Windows</h2>
+    <ol>
+      <li>Download the <strong>Windows VST3</strong> zip from the
+          <a href="../index.html#downloads">Downloads</a> section.</li>
+      <li>Extract (right-click &rarr; <em>Extract All&hellip;</em>).</li>
+      <li>Copy the <code>.vst3</code> file (or folder) to:
+        <pre><code>C:\Program Files\Common Files\VST3\</code></pre>
+      </li>
+      <li>Open your DAW and rescan plugins:
+        <ul>
+          <li><strong>Ableton Live:</strong> Options &rarr; Preferences &rarr; Plug-Ins &rarr; Rescan</li>
+          <li><strong>FL Studio:</strong> Options &rarr; Manage Plugins &rarr; Start scan</li>
+          <li><strong>Reaper:</strong> Options &rarr; Preferences &rarr; Plug-ins &rarr; VST &rarr; Re-scan</li>
+          <li><strong>Bitwig:</strong> Settings &rarr; Plug-ins &rarr; Rescan</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- ── macOS ────────────────────────────────────────────────────────── -->
+    <h2>&#8984; macOS</h2>
+    <ol>
+      <li>Download the <strong>macOS VST3</strong> zip.</li>
+      <li>Double-click the zip to extract.</li>
+      <li>Copy the <code>.vst3</code> bundle to:
+        <pre><code>/Library/Audio/Plug-Ins/VST3/</code></pre>
+        <p>(Or for current user only: <code>~/Library/Audio/Plug-Ins/VST3/</code>)</p>
+      </li>
+      <li>If macOS blocks the file, see
+          <a href="troubleshooting.html#macos-gatekeeper">Gatekeeper troubleshooting</a>.</li>
+      <li>Open your DAW and rescan plugins.</li>
+    </ol>
+
+    <!-- ── Linux ────────────────────────────────────────────────────────── -->
+    <h2>&#128039; Linux</h2>
+    <ol>
+      <li>Download the <strong>Linux VST3</strong> zip.</li>
+      <li>Extract:
+        <pre><code>unzip Panoramatone_Linux_VST3_*.zip</code></pre>
+      </li>
+      <li>Copy the <code>.vst3</code> folder to one of:
+        <pre><code>~/.vst3/
+# or system-wide:
+/usr/lib/vst3/</code></pre>
+      </li>
+      <li>Rescan in your DAW (Bitwig, Reaper, Ardour, etc.).</li>
+    </ol>
+
+    <h2>DAW Rescan Tips</h2>
+    <p>Most DAWs auto-scan the standard VST3 paths on startup. If the plugin
+       doesn&rsquo;t appear:</p>
+    <ul>
+      <li>Make sure the <code>.vst3</code> file/folder is in the right directory.</li>
+      <li>Trigger a manual rescan from your DAW&rsquo;s plugin manager.</li>
+      <li>Restart the DAW if the rescan doesn&rsquo;t pick it up.</li>
+      <li>Check <a href="troubleshooting.html">Troubleshooting</a> for more help.</li>
+    </ul>
+  </main>
+
+  <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="license.html">License</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> Sunbunny. Free to use &mdash; no warranty.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

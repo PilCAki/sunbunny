@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog — Sunbunny Panoramatone</title>
+  <link rel="icon" href="../../../assets/headshot.png" type="image/png">
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../../index.html" class="logo-link">
+        <img src="../../../assets/headshot.png" alt="Sunbunny" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="install.html">Install</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="troubleshooting.html">Help</a>
+        <a href="../index.html#downloads" class="nav-cta">Download</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="doc-page">
+    <a href="../index.html" class="back-link">&larr; Back to Panoramatone</a>
+    <h1>Changelog</h1>
+    <p>All releases are listed below, newest first. Downloads are on
+       <a href="#" id="cl-releases-link">GitHub Releases</a>.</p>
+
+    <div id="changelog-entries">
+      <p class="loading">Loading changelog&hellip;</p>
+    </div>
+  </main>
+
+  <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="license.html">License</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> Sunbunny. Free to use &mdash; no warranty.</p>
+    </div>
+  </footer>
+
+
+  <!-- Reuse the same app.js — it checks for #changelog-entries -->
+  <script src="../../../app.js"></script>
+  <script>
+    window.PLUGIN_CONFIG = {
+      name:         "Sunbunny Panoramatone",
+      slug:         "panoramatone",
+      owner:        "PilCAki",
+      repo:         "sunbunny",
+      releasesUrl:  "https://api.github.com/repos/PilCAki/sunbunny/releases",
+      releasesPage: "https://github.com/PilCAki/sunbunny/releases",
+      discussions:  "https://github.com/PilCAki/sunbunny/discussions",
+      issuesUrl:    "https://github.com/PilCAki/sunbunny/issues"
+    };
+    // Wire the releases link
+    const rl = document.getElementById("cl-releases-link");
+    if (rl && window.PLUGIN_CONFIG) rl.href = window.PLUGIN_CONFIG.releasesPage;
+  </script>
+</body>
+</html>

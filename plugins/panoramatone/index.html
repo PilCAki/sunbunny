@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunbunny Panoramatone — Analog-style pitch vibrato that adds lush vintage shimmer and organic movement to any sound.</title>
+  <meta name="description" content="Free VST3 stereo vibrato plugin for Windows, macOS, and Linux. Warm, lush, and effortlessly weird.">
+  <link rel="icon" href="../../assets/headshot.png" type="image/png">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../index.html" class="logo-link">
+        <img src="../../assets/headshot.png" alt="Sunbunny" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="docs/install.html">Install</a>
+        <a href="docs/changelog.html">Changelog</a>
+        <a href="docs/troubleshooting.html">Help</a>
+        <a href="#downloads" class="nav-cta">Download</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════ HERO ══════════════════════════════════ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-title" id="plugin-name">Sunbunny Panoramatone</h1>
+        <p class="hero-tagline" id="plugin-tagline">Analog-style pitch vibrato that adds lush vintage shimmer and organic movement to any sound.</p>
+
+        <div class="hero-buttons" id="download-buttons">
+          <a href="#" class="btn btn-primary" id="dl-windows" data-platform="windows">
+            <span class="btn-icon">&oplus;</span> Download &middot; Windows VST3
+          </a>
+          <a href="#" class="btn btn-primary" id="dl-macos" data-platform="macos">
+            <span class="btn-icon">&#8984;</span> Download &middot; macOS VST3
+          </a>
+          <a href="#" class="btn btn-primary" id="dl-linux" data-platform="linux">
+            <span class="btn-icon">&#128039;</span> Download &middot; Linux VST3
+          </a>
+        </div>
+        <p class="hero-version" id="hero-version"><!-- filled by JS --></p>
+
+        <div class="hero-secondary">
+          <a href="docs/changelog.html">Release notes</a>
+          <span class="dot">&middot;</span>
+          <a href="docs/install.html">Installation</a>
+          <span class="dot">&middot;</span>
+          <a href="docs/troubleshooting.html">Troubleshooting</a>
+          <span class="dot">&middot;</span>
+          <a href="#" id="link-discussions">Feedback / Requests</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../../assets/plugins/panoramatone/panoramatone_2_11_2026.png" alt="Sunbunny Panoramatone screenshot" id="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ SCREENSHOTS ═══════════════════════════ -->
+  <section class="screenshots" id="screenshots">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <div class="screenshot-grid">
+                <div class="screenshot-card">
+          <img src="../../assets/plugins/panoramatone/screenshots/panoramatone_2_11_2026.png" alt="Panoramatone plugin UI" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ FEATURES ══════════════════════════════ -->
+  <section class="features">
+    <div class="container">
+      <h2>What It Does</h2>
+      <ul class="feature-list">
+                <li><strong>True stereo vibrato</strong> — smooth pitch modulation with adjustable depth and rate.</li>
+        <li><strong>Warm analog character</strong> — subtle saturation and rich analog-style pitch shifting.</li>
+        <li><strong>Lightweight</strong> — near-zero CPU on all platforms.</li>
+        <li><strong>VST3 format</strong> — works in every major DAW (Ableton, FL Studio, Reaper, Bitwig, Logic via wrapper, etc.).</li>
+        <li><strong>Windows, macOS, Linux</strong> — support across operating systems.</li>
+        <li><strong>Free</strong> — no sign-up, no activation, no telemetry.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SYSTEM REQUIREMENTS ════════════════════════ -->
+  <section class="sysreq">
+    <div class="container">
+      <h2>System Requirements</h2>
+      <div class="sysreq-grid">
+        <div class="sysreq-card">
+          <h3>&oplus; Windows</h3>
+          <ul>
+            <li>Windows 10 or later (64-bit)</li>
+            <li>Any VST3-compatible host</li>
+          </ul>
+        </div>
+        <div class="sysreq-card">
+          <h3>&#8984; macOS</h3>
+          <ul>
+            <li>macOS 11 Big Sur or later (Intel &amp; Apple Silicon)</li>
+            <li>Any VST3-compatible host</li>
+          </ul>
+        </div>
+        <div class="sysreq-card">
+          <h3>&#128039; Linux</h3>
+          <ul>
+            <li>Ubuntu 20.04+ / Fedora 34+ or equivalent (x86_64)</li>
+            <li>Any VST3-compatible host (Bitwig, Reaper, Ardour, etc.)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ DOWNLOADS ANCHOR ═══════════════════════════ -->
+  <section class="downloads" id="downloads">
+    <div class="container">
+      <h2>Downloads</h2>
+      <p>Grab the latest release for your platform. All downloads are also available on
+        <a href="#" id="link-releases">GitHub Releases</a>.</p>
+
+      <div class="download-cards" id="download-cards">
+        <!-- populated by JS from releases.json / GitHub API -->
+        <p class="loading" id="loading-msg">Loading latest release&hellip;</p>
+      </div>
+
+      <div class="checksum-block">
+        <h3>Verify Your Download</h3>
+        <p>Compare the SHA-256 checksum of the zip you downloaded against
+           <a href="downloads/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+        <pre><code># macOS / Linux
+shasum -a 256 Panoramatone_*.zip
+
+# Windows (PowerShell)
+Get-FileHash .\Panoramatone_*.zip -Algorithm SHA256</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ TRUST & SAFETY ══════════════════════════════ -->
+  <section class="trust">
+    <div class="container">
+      <h2>Trust &amp; Safety</h2>
+      <p>This plugin is an independent freeware project. The builds are currently
+         <strong>unsigned and unnotarized</strong>, which means your OS may show a
+         warning the first time you open it.</p>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h3>&oplus; Windows SmartScreen</h3>
+          <p>If Windows shows a &ldquo;Windows protected your PC&rdquo; dialog:</p>
+          <ol>
+            <li>Click <strong>More info</strong></li>
+            <li>Click <strong>Run anyway</strong></li>
+          </ol>
+          <p>Distributing as a <code>.zip</code> (not an installer) greatly reduces
+             the chance of SmartScreen triggering.</p>
+        </div>
+        <div class="trust-card">
+          <h3>&#8984; macOS Gatekeeper</h3>
+          <p>If macOS says the file &ldquo;can&rsquo;t be opened because it is from an
+             unidentified developer&rdquo;:</p>
+          <ol>
+            <li>Open <strong>System Settings &rarr; Privacy &amp; Security</strong></li>
+            <li>Scroll down and click <strong>Open Anyway</strong> next to the
+                blocked file message</li>
+          </ol>
+        </div>
+        <div class="trust-card">
+          <h3>&#128274; Verify checksums</h3>
+          <p>Every release includes a <code>SHA256SUMS.txt</code> file. Verify your
+             download matches before installing.</p>
+          <p><a href="downloads/SHA256SUMS.txt">View checksums &rarr;</a></p>
+        </div>
+      </div>
+      <p class="trust-note">Unsigned/unnotarized because this is an early freeware
+         experiment. Code signing and notarization will be added if demand warrants it.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="docs/license.html">License</a>
+        <a href="docs/privacy.html">Privacy</a>
+        <a href="#" id="link-footer-discussions">Feedback &amp; Support</a>
+        <a href="#" id="link-footer-issues">Report a Bug</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> Sunbunny. Free to use &mdash; no warranty.</p>
+    </div>
+  </footer>
+
+
+  <script src="../../app.js"></script>
+  <script>
+    window.PLUGIN_CONFIG = {
+      name:         "Sunbunny Panoramatone",
+      slug:         "panoramatone",
+      owner:        "PilCAki",
+      repo:         "sunbunny",
+      releasesUrl:  "https://api.github.com/repos/PilCAki/sunbunny/releases",
+      releasesPage: "https://github.com/PilCAki/sunbunny/releases",
+      discussions:  "https://github.com/PilCAki/sunbunny/discussions",
+      issuesUrl:    "https://github.com/PilCAki/sunbunny/issues"
+    };
+  </script>
+</body>
+</html>
