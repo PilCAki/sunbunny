@@ -12,7 +12,9 @@
 // ── Configuration (set per-page by inline <script>) ────────────────────────
 // window.PLUGIN_CONFIG = { name, slug, owner, repo, releasesUrl, releasesPage, discussions, issuesUrl }
 
-const CFG = window.PLUGIN_CONFIG || null;
+// NOTE: CFG is read lazily in init() because app.js loads before the inline
+// <script> that sets PLUGIN_CONFIG.
+let CFG = null;
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 function $(sel) { return document.querySelector(sel); }
@@ -167,6 +169,9 @@ async function fetchGitHubReleases() {
 
 // ── Main init ──────────────────────────────────────────────────────────────
 async function init() {
+  // Read config now — after the inline <script> has set it
+  CFG = window.PLUGIN_CONFIG || null;
+
   wireLinks();
 
   // On the brand homepage (no PLUGIN_CONFIG), skip release fetching
