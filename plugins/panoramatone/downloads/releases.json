@@ -3,15 +3,16 @@
     "version": "0.1.0",
     "date": "2026-02-11",
     "assets": {
-      "linux_vst3": "Panoramatone_Linux_VST3_v0.1.0.zip",
-      "windows_vst3": "Panoramatone_Windows_VST3_v0.1.0.zip",
-      "macos_vst3": "Panoramatone_macOS_VST3_v0.1.0.zip"
+      "linux_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_Linux_VST3_v0.1.0.zip",
+      "windows_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_Windows_VST3_v0.1.0.zip",
+      "macos_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_macOS_VST3_v0.1.0.zip"
     },
     "sha256": {
       "Panoramatone_Linux_VST3_v0.1.0.zip": "eeaf5eff5551a8b13566d86433ad93bcf539e210cc38367df0ffc4d5b5942113",
       "Panoramatone_Windows_VST3_v0.1.0.zip": "440b57099fa689657c43c088f05109c22931d0a14aefd13d84af4c9cb58225e5",
       "Panoramatone_macOS_VST3_v0.1.0.zip": "060b0715704a16fc510f8c4d1e589d8e843451e5fa700220663c8ae75085c6a0"
     },
+    "release_page": "https://github.com/PilCAki/sunbunny/releases/tag/v0.1.0",
     "notes": "Initial release of Sunbunny Panoramatone \u2014 analog-style pitch vibrato that adds lush vintage shimmer and organic movement to any sound."
   }
 ]

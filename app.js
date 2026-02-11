@@ -45,6 +45,7 @@ function wireLinks() {
     "link-releases":            CFG.releasesPage,
     "link-footer-discussions":  CFG.discussions,
     "link-footer-issues":       CFG.issuesUrl,
+    "cl-releases-link":         CFG.releasesPage,
   };
   for (const [id, url] of Object.entries(map)) {
     const el = document.getElementById(id);
@@ -78,12 +79,14 @@ function renderDownloadCards(releases) {
   }
 
   const latest = releases[0];
+  const releaseUrl = latest.release_page || releasesPage;
 
   for (const [platform, label] of Object.entries(PLATFORM_LABELS)) {
     const asset = latest.assets && latest.assets[platform + "_vst3"];
-    const url   = asset
-      ? (typeof asset === "string" && asset.startsWith("http") ? asset : `${releasesPage}/latest`)
-      : releasesPage;
+    // Asset is now a full URL from releases.json; fall back to release page
+    const url = (typeof asset === "string" && asset.startsWith("http"))
+      ? asset
+      : releaseUrl;
 
     const card = document.createElement("div");
     card.className = "dl-card";
@@ -107,11 +110,14 @@ function renderChangelog(releases) {
     return;
   }
 
+  const releasesPage = CFG ? CFG.releasesPage : "#";
+
   for (const r of releases) {
+    const releaseUrl = r.release_page || `${releasesPage}/tag/v${r.version}`;
     const entry = document.createElement("div");
     entry.className = "changelog-entry";
     entry.innerHTML = `
-      <h3>v${r.version || "?"}</h3>
+      <h3><a href="${releaseUrl}">v${r.version || "?"}</a></h3>
       <p class="date">${r.date || ""}</p>
       <p>${r.notes || "No notes."}</p>
     `;
@@ -121,11 +127,15 @@ function renderChangelog(releases) {
 
 // ── Fetch from local releases.json (works offline / pre-generated) ─────────
 async function fetchLocalReleases() {
-  try {
-    const resp = await fetch("downloads/releases.json");
-    if (!resp.ok) return null;
-    return await resp.json();
-  } catch { return null; }
+  // Try multiple relative paths — handles both plugin index and doc pages
+  const paths = ["downloads/releases.json", "../downloads/releases.json"];
+  for (const p of paths) {
+    try {
+      const resp = await fetch(p);
+      if (resp.ok) return await resp.json();
+    } catch {}
+  }
+  return null;
 }
 
 // ── Fetch from GitHub API (public, no auth, rate-limited ~60 req/hr) ───────
