@@ -44,7 +44,6 @@ function wireLinks() {
 
   const map = {
     "link-discussions":         CFG.discussions,
-    "link-releases":            CFG.releasesPage,
     "link-footer-discussions":  CFG.discussions,
     "link-footer-issues":       CFG.issuesUrl,
     "cl-releases-link":         CFG.releasesPage,
@@ -76,7 +75,7 @@ function renderDownloadCards(releases) {
   const releasesPage = CFG ? CFG.releasesPage : "#";
 
   if (!releases || releases.length === 0) {
-    container.innerHTML = `<p>No releases yet. Check back soon or visit <a href="${releasesPage}">GitHub Releases</a>.</p>`;
+    container.innerHTML = `<p>No releases yet. Check back soon!</p>`;
     return;
   }
 
@@ -214,7 +213,7 @@ async function init() {
   } else {
     setHeroButtons({ windows: releasesPage, macos: releasesPage, linux: releasesPage });
     const lm = document.getElementById("loading-msg");
-    if (lm) lm.textContent = "No releases found yet. Check GitHub Releases.";
+    if (lm) lm.textContent = "No releases found yet. Check back soon!";
   }
 }
 
