@@ -40,7 +40,7 @@ If you prefer to keep the repository private:
    - CDN service (Cloudflare R2, etc.)
 
 2. Update download URLs in these files:
-   - `/plugins/panoramatone/index.html` (lines 37-45, 132-143)
+   - `/plugins/panoramatone/index.html` (hero download buttons and download cards section)
    - `/plugins/panoramatone/downloads/releases.json`
 
 #### Option 3: Create Public Releases Repository
