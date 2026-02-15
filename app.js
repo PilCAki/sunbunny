@@ -176,6 +176,9 @@ async function init() {
   // On the brand homepage (no PLUGIN_CONFIG), skip release fetching
   if (!CFG) return;
 
+  // Gumroad plugins don't have GitHub releases — skip fetching
+  if (CFG.downloadType === "gumroad") return;
+
   const releasesPage = CFG.releasesPage || "#";
 
   // Try local releases.json first, then GitHub API

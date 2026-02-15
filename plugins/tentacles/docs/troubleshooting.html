@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troubleshooting — Sunbunny Tentacles</title>
+  <link rel="icon" href="../../../assets/headshot.png" type="image/png">
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../../../index.html" class="logo-link">
+        <img src="../../../assets/headshot.png" alt="Sunbunny" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="install.html">Install</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="troubleshooting.html">Help</a>
+        <a href="../index.html#downloads" class="nav-cta">Download</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="doc-page">
+    <a href="../index.html" class="back-link">&larr; Back to Tentacles</a>
+    <h1>Troubleshooting</h1>
+
+    <!-- ── Plugin not showing ───────────────────────────────────────────── -->
+    <h2 id="not-showing">Plugin not showing up in my DAW</h2>
+    <ol>
+      <li><strong>Verify the file location.</strong> Make sure the <code>.vst3</code>
+          file or folder is in the correct path for your OS
+          (see <a href="install.html">Installation Guide</a>).</li>
+      <li><strong>Rescan plugins.</strong> Most DAWs have a &ldquo;Rescan&rdquo; or
+          &ldquo;Refresh&rdquo; button in their plugin manager / preferences.</li>
+      <li><strong>Restart the DAW.</strong> Some hosts only detect new plugins
+          on a full restart.</li>
+      <li><strong>Architecture mismatch.</strong> Make sure you downloaded the
+          build matching your system (x86_64). ARM/Apple-Silicon builds
+          are universal on macOS.</li>
+      <li><strong>Check the DAW&rsquo;s plugin blacklist.</strong> If a previous scan
+          failed, the plugin may have been blacklisted. Clear the blacklist
+          and rescan.</li>
+    </ol>
+
+    <!-- ── macOS Gatekeeper ─────────────────────────────────────────────── -->
+    <h2 id="macos-gatekeeper">macOS: &ldquo;Cannot be opened because the developer cannot be verified&rdquo;</h2>
+    <p>This happens because the plugin is not notarized by Apple. It is safe &mdash;
+       you can verify the download&rsquo;s SHA-256 checksum
+       (<a href="../downloads/SHA256SUMS.txt">SHA256SUMS.txt</a>).</p>
+    <h3>Fix</h3>
+    <ol>
+      <li>Open <strong>System Settings</strong> (or System Preferences on older macOS).</li>
+      <li>Go to <strong>Privacy &amp; Security</strong>.</li>
+      <li>Scroll down. You should see a message about the blocked file.</li>
+      <li>Click <strong>&ldquo;Open Anyway&rdquo;</strong>.</li>
+      <li>If prompted again, click <strong>&ldquo;Open&rdquo;</strong>.</li>
+    </ol>
+    <h3>Alternative (Terminal)</h3>
+    <pre><code>sudo xattr -rd com.apple.quarantine /Library/Audio/Plug-Ins/VST3/Sunbunny Tentacles.vst3</code></pre>
+
+    <!-- ── Windows SmartScreen ──────────────────────────────────────────── -->
+    <h2 id="windows-smartscreen">Windows: SmartScreen warning</h2>
+    <p>Because the plugin is distributed as a <code>.zip</code> (not a signed
+       installer), SmartScreen warnings are uncommon. If you do see one:</p>
+    <ol>
+      <li>Click <strong>&ldquo;More info&rdquo;</strong>.</li>
+      <li>Click <strong>&ldquo;Run anyway&rdquo;</strong>.</li>
+    </ol>
+    <p>You can verify the download integrity with:</p>
+    <pre><code>Get-FileHash .\Tentacles_Windows_VST3_*.zip -Algorithm SHA256</code></pre>
+    <p>Compare the output against
+       <a href="../downloads/SHA256SUMS.txt">SHA256SUMS.txt</a>.</p>
+
+    <!-- ── Audio issues ─────────────────────────────────────────────────── -->
+    <h2>Audio glitches / high CPU</h2>
+    <ul>
+      <li>Increase your DAW&rsquo;s audio buffer size (try 512 or 1024 samples).</li>
+      <li>Make sure you are using the <strong>latest version</strong> of the plugin.</li>
+      <li>If the issue persists, please
+          <a href="https://github.com/PilCAki/sunbunny/issues">open a bug report</a>
+          with your OS, DAW, buffer size, and sample rate.</li>
+    </ul>
+
+    <!-- ── Still stuck ──────────────────────────────────────────────────── -->
+    <h2>Still stuck?</h2>
+    <p>Open a discussion or file a bug:</p>
+    <ul>
+      <li>&#128172; <a href="https://github.com/PilCAki/sunbunny/discussions">Discussions (questions &amp; requests)</a></li>
+      <li>&#128027; <a href="https://github.com/PilCAki/sunbunny/issues">Issues (bugs)</a></li>
+    </ul>
+  </main>
+
+  <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="license.html">License</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> Sunbunny. Free to use &mdash; no warranty.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

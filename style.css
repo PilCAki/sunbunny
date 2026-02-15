@@ -102,7 +102,14 @@ section:nth-child(even) {
   font-size: 1.15rem;
   letter-spacing: 0.02em;
 }
-.logo-img  { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--accent); }
+.logo-img  {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: #f6e6cf;
+  object-fit: contain;
+}
 .main-nav  { display: flex; gap: 1.5rem; align-items: center; font-size: 0.92rem; }
 .main-nav a { color: var(--text-muted); }
 .main-nav a:hover { color: var(--text); }
@@ -138,9 +145,13 @@ section:nth-child(even) {
     radial-gradient(ellipse at 70% 40%, rgba(245,166,35,0.12) 0%, transparent 55%),
     /* base gradient */
     linear-gradient(170deg, #3a2410 0%, #2a1a08 50%, #1e1204 100%);
+  position: relative;
+  isolation: isolate;
 }
 .hero-inner {
   display: flex; align-items: center; gap: 3rem;
+  position: relative;
+  z-index: 1;
 }
 .hero-text { flex: 1; min-width: 0; }
 .hero-image { flex: 0 0 420px; }
@@ -343,7 +354,9 @@ section:nth-child(even) {
 .brand-logo-hero {
   width: 200px;
   border-radius: var(--radius);
-  filter: drop-shadow(0 0 30px rgba(245,166,35,0.2));
+  background: #f6e6cf;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
 }
 .brand-about { color: var(--text-muted); font-size: 1.05rem; margin-top: 1rem; max-width: 600px; }
 
@@ -503,6 +516,22 @@ section:nth-child(even) {
 ::-webkit-scrollbar-track { background: var(--surface); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Pay-what-you-want note ──────────────────────────────────────────────── */
+.pwyw-note {
+  font-size: 0.9rem;
+  color: var(--text-muted, #b89060);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.dl-card-gumroad {
+  grid-column: 1 / -1;       /* span full width of download-cards grid */
+  text-align: center;
+}
+.dl-card-gumroad .dl-btn {
+  font-size: 1.1rem;
+  padding: 0.9em 2em;
+}
 
 /* ── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
