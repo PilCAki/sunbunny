@@ -1,7 +1,23 @@
 [
   {
+    "version": "0.2.0",
+    "date": "2026-02-16",
+    "assets": {
+      "linux_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.2.0/Panoramatone_Linux_VST3_v0.2.0.zip",
+      "windows_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.2.0/Panoramatone_Windows_VST3_v0.2.0.zip",
+      "macos_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.2.0/Panoramatone_macOS_VST3_v0.2.0.zip"
+    },
+    "sha256": {
+      "Panoramatone_Linux_VST3_v0.2.0.zip": "bdfa032cee05371b4ef385cf1710176fe70b1bf306c5c08707120508b8703c9f",
+      "Panoramatone_Windows_VST3_v0.2.0.zip": "71bf63a89ef51602f7376d182a0a9df4df2152c1ed22f186e31ff95cfddd4c97",
+      "Panoramatone_macOS_VST3_v0.2.0.zip": "137b08624fd833ecf54d06d4dceb0510fc97e2644c5e4410582adfa58397f45d"
+    },
+    "release_page": "https://github.com/PilCAki/sunbunny/releases/tag/v0.2.0",
+    "notes": "Sunbunny Panoramatone v0.2.0"
+  },
+  {
     "version": "0.1.0",
-    "date": "2026-02-15",
+    "date": "2026-02-16",
     "assets": {
       "linux_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_Linux_VST3_v0.1.0.zip",
       "windows_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_Windows_VST3_v0.1.0.zip",
