@@ -110,9 +110,15 @@ section:nth-child(even) {
   background: #f6e6cf;
   object-fit: contain;
 }
-.main-nav  { display: flex; gap: 1.5rem; align-items: center; font-size: 0.92rem; }
+.main-nav  { display: flex; gap: 1.5rem; align-items: center; font-size: 0.92rem; flex-wrap: wrap; }
 .main-nav a { color: var(--text-muted); }
 .main-nav a:hover { color: var(--text); }
+.main-nav a.nav-active { color: var(--accent); opacity: 0.6; pointer-events: none; }
+.nav-sep {
+  width: 1px; height: 1.1em;
+  background: var(--border);
+  flex-shrink: 0;
+}
 .nav-cta {
   background: var(--accent);
   color: #1a0a00 !important;
@@ -540,7 +546,8 @@ section:nth-child(even) {
   .hero-title { font-size: 2rem; }
   .hero-buttons { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
-  .main-nav { gap: 1rem; font-size: 0.85rem; }
+  .main-nav { gap: 0.7rem; font-size: 0.8rem; }
+  .nav-sep { height: 0.9em; }
   h2 { font-size: 1.5rem; }
   .brand-logo-hero { width: 120px; }
   .plugin-catalog { grid-template-columns: 1fr; }

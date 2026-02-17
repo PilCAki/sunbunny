@@ -1,7 +1,7 @@
 [
   {
     "version": "0.2.0",
-    "date": "2026-02-16",
+    "date": "2026-02-17",
     "assets": {
       "linux_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.2.0/Panoramatone_Linux_VST3_v0.2.0.zip",
       "windows_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.2.0/Panoramatone_Windows_VST3_v0.2.0.zip",
@@ -17,7 +17,7 @@
   },
   {
     "version": "0.1.0",
-    "date": "2026-02-16",
+    "date": "2026-02-17",
     "assets": {
       "linux_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_Linux_VST3_v0.1.0.zip",
       "windows_vst3": "https://github.com/PilCAki/sunbunny/releases/download/v0.1.0/Panoramatone_Windows_VST3_v0.1.0.zip",
