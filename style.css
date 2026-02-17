@@ -114,11 +114,6 @@ section:nth-child(even) {
 .main-nav a { color: var(--text-muted); }
 .main-nav a:hover { color: var(--text); }
 .main-nav a.nav-active { color: var(--accent); opacity: 0.6; pointer-events: none; }
-.nav-sep {
-  width: 1px; height: 1.1em;
-  background: var(--border);
-  flex-shrink: 0;
-}
 .nav-cta {
   background: var(--accent);
   color: #1a0a00 !important;
@@ -547,7 +542,6 @@ section:nth-child(even) {
   .hero-buttons { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
   .main-nav { gap: 0.7rem; font-size: 0.8rem; }
-  .nav-sep { height: 0.9em; }
   h2 { font-size: 1.5rem; }
   .brand-logo-hero { width: 120px; }
   .plugin-catalog { grid-template-columns: 1fr; }
