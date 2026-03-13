@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy — Sunbunny</title>
+  <link rel="icon" href="assets/headshot.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.SITE_CONFIG = {
+      companyName: "Sunbunny",
+      metaPixelId: "239977424398387",
+      privacyUrl: "privacy.html",
+      pageType: "privacy"
+    };
+  </script>
+</head>
+<body>
+  <!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/headshot.png" alt="Sunbunny" class="logo-img">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="https://www.instagram.com/sunbunnyband" target="_blank" rel="noopener">Instagram</a>
+        <a href="index.html#plugins" class="nav-cta">Plugins</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="doc-page">
+    <h1>Site Privacy</h1>
+    <p><strong>Last updated: March 2026</strong></p>
+
+    <h2>Summary</h2>
+    <p>Sunbunny keeps tracking intentionally small. The plugins themselves do not phone home, and this website only loads Meta Pixel if you explicitly opt in.</p>
+
+    <h2>What the plugins do</h2>
+    <ul>
+      <li><strong>No plugin telemetry:</strong> The downloadable plugins do not send analytics, usage data, or crash reports back to Sunbunny.</li>
+      <li><strong>No plugin network access:</strong> The plugins do not connect to Sunbunny servers in normal use.</li>
+    </ul>
+
+    <h2>What the website does</h2>
+    <p>If you accept, Sunbunny loads Meta Pixel to measure whether advertising is sending people to the right pages and download buttons. In the first version, that means page views and download-button clicks only.</p>
+    <ul>
+      <li><strong>No Meta before consent:</strong> The site does not load Meta Pixel until you opt in.</li>
+      <li><strong>Rejecting is fine:</strong> The site still works if you reject.</li>
+      <li><strong>Privacy Settings:</strong> You can change your choice later using the Privacy Settings control in the footer.</li>
+      <li><strong>Global Privacy Control:</strong> If your browser sends a GPC signal, Sunbunny treats that as a request to keep Meta Pixel off.</li>
+    </ul>
+
+    <h2>Local storage</h2>
+    <p>This site stores your privacy choice in your browser so it can remember whether Meta Pixel should stay on or off on later page loads.</p>
+
+    <h2>Third-party services</h2>
+    <p>GitHub Pages hosts this website, and GitHub Releases hosts downloadable plugin files. If you opt into Meta Pixel, Meta may receive standard browser request data associated with those events according to Meta&rsquo;s own policies.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Reach out through the Sunbunny GitHub discussions linked on each plugin page.</p>
+  </main>
+
+  <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="music.html">Music</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="plugins/absolutely-smashing/">Absolutely Smashing</a>
+        <a href="plugins/panoramatone/">Panoramatone</a>
+        <a href="plugins/tentacles/">Tentacles</a>
+      </div>
+      <p class="footer-actions">
+        <button type="button" class="footer-link-button" data-open-privacy-settings hidden>Privacy Settings</button>
+      </p>
+      <p class="footer-copy">&copy; <span id="footer-year">2026</span> Sunbunny. Free to use &mdash; no warranty.</p>
+    </div>
+  </footer>
+
+
+  <script src="assets/js/meta-pixel.js"></script>
+  <script src="assets/js/consent.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

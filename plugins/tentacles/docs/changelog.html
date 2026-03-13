@@ -6,6 +6,14 @@
   <title>Changelog — Sunbunny Tentacles</title>
   <link rel="icon" href="../../../assets/headshot.png" type="image/png">
   <link rel="stylesheet" href="../../../style.css">
+  <script>
+    window.SITE_CONFIG = {
+      companyName: "Sunbunny",
+      metaPixelId: "239977424398387",
+      privacyUrl: "../../../privacy.html",
+      pageType: "plugin-doc"
+    };
+  </script>
 </head>
 <body>
   <!-- ════════════════════════════════ HEADER ════════════════════════════════ -->
@@ -47,17 +55,19 @@
         <a href="https://github.com/PilCAki/sunbunny/discussions">Feedback &amp; Support</a>
         <a href="https://github.com/PilCAki/sunbunny/issues">Report a Bug</a>
       </div>
+      <p class="footer-actions">
+        <button type="button" class="footer-link-button" data-open-privacy-settings hidden>Privacy Settings</button>
+      </p>
       <p class="footer-copy">&copy; <span id="footer-year">2026</span> Sunbunny. Free to use &mdash; no warranty.</p>
     </div>
   </footer>
 
 
-  <!-- Reuse the same app.js — it checks for #changelog-entries -->
-  <script src="../../../app.js"></script>
   <script>
     window.PLUGIN_CONFIG = {
       name:         "Sunbunny Tentacles",
       slug:         "tentacles",
+      latestVersion: "",
       owner:        "PilCAki",
       repo:         "sunbunny",
       releasesUrl:  "https://api.github.com/repos/PilCAki/sunbunny/releases",
@@ -66,5 +76,8 @@
       issuesUrl:    "https://github.com/PilCAki/sunbunny/issues"
     };
   </script>
+  <script src="../../../assets/js/meta-pixel.js"></script>
+  <script src="../../../assets/js/consent.js"></script>
+  <script src="../../../assets/js/app.js"></script>
 </body>
 </html>
