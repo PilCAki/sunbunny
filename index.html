@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunbunny — Musical creations by A.I. Expert and Indie Jazz Rock musician Phillip Adkins.</title>
-  <meta name="description" content="">
+  <title>Sunbunny — Music &amp; curious audio plugins</title>
+  <meta name="description" content="Independent audio plugins and instrumental music by Phillip Adkins. Explore Oh See Threee, Tentacles, Panoramatone and Absolutely Smashing.">
   <link rel="icon" href="assets/headshot.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3b3da6b77b98">
   <script>
     window.SITE_CONFIG = {
       companyName: "Sunbunny",
@@ -22,11 +22,12 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link">
-        <img src="assets/headshot.png" alt="Sunbunny" class="logo-img">
+        <img src="assets/headshot.png" alt="" class="logo-img">
+        <img src="assets/logo.png" alt="Sunbunny" class="logo-wordmark">
       </a>
       <nav class="main-nav">
         <a href="index.html" class="nav-active" aria-current="page">Home</a>
-        <a href="music.html">Music</a>
+        <a href="#music">Music</a>
         <a href="https://www.instagram.com/sunbunnyband" target="_blank" rel="noopener">Instagram</a>
         <a href="index.html#plugins" class="nav-cta">Plugins</a>
       </nav>
@@ -34,11 +35,13 @@
   </header>
 
 
-  <!-- ════════════════════════════════ HERO ══════════════════════════════════ -->
-  <section class="hero brand-hero">
+  <main>
+  <section class="hero brand-hero home-intro">
     <div class="container hero-inner">
       <div class="hero-text">
-        <h1 class="hero-title">Sunbunny</h1>
+        <p class="eyebrow">Uncommon Sounds &amp; Curious Instruments</p>
+        <h1 class="hero-title home-brand-name">Sunbunny</h1>
+        <p class="home-pitch">A little more strange.</p>
         <p class="hero-tagline">Musical creations by A.I. Expert and Indie Jazz Rock musician Phillip Adkins.</p>
         <p class="brand-about">Sunbunny is about exploring quirky sounds and vibes via advanced harmony and shoegazey chains of vintagey tones with hipster bleep bloop pedals, often jammed into pop-structured guitar-centric instrumental tracks. Please feel free to reach out for collabs on music, tech or anything at all.</p>
         <div class="social-links">
@@ -47,22 +50,57 @@
           <a href="https://music.apple.com/us/artist/sunbunny/1501456108" target="_blank" rel="noopener" class="social-link">&#127822; Apple Music</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="assets/headshot.png" alt="Sunbunny" id="hero-img" class="brand-logo-hero">
+      <div class="hero-image home-intro-image">
+        <img src="assets/headshot.png" alt="Sunbunny artist portrait" id="hero-img" class="brand-logo-hero">
       </div>
     </div>
   </section>
+  <section class="home-releases" aria-labelledby="home-releases-title">
+    <div class="container">
+      <p class="eyebrow">Sunbunny Sounds, in Two Forms</p>
+      <h2 id="home-releases-title">Featured sounds</h2>
+      <div class="home-release-grid">
+        <a class="home-release-card" href="plugins/ohseethree/">
+          <span class="home-release-art"><img src="assets/plugins/ohseethree/ohseethree-full.png" alt="Oh See Threee plugin interface" loading="lazy"></span>
+          <span class="home-release-copy">
+            <span class="eyebrow">Featured plugin</span>
+            <span class="home-release-title">Oh See Threee</span>
+            <span class="home-release-description">An analog-style octave divider that turns any input into a layered, glitchy analog choir.</span>
+            <span class="home-release-link">Explore Oh See Threee <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+        <a class="home-release-card" href="#music">
+          <span class="home-release-art"><img src="assets/music/poolrooms.jpg" alt="Poolrooms album artwork" loading="lazy"></span>
+          <span class="home-release-copy">
+            <span class="eyebrow">Featured music</span>
+            <span class="home-release-title">Poolrooms</span>
+            <span class="home-release-description">Two mixtape-inspired tracks for wet, hazy, dreamy days.</span>
+            <span class="home-release-link">Listen to Poolrooms <span aria-hidden="true">↗</span></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="home-story"><div class="container"><p class="eyebrow">Made to be played with</p><h2>Tools for the happy accidents.</h2><p class="section-lead">Explore octave layers, drifting vibrato, stereo movement and unapologetic clipping. Each Sunbunny plugin starts with a sound worth chasing.</p></div></section>
 
   <!-- ═══════════════════════════════ PLUGINS ════════════════════════════════ -->
   <section class="plugins" id="plugins">
     <div class="container">
-      <h2>Plugins</h2>
+      <p class="eyebrow">The collection</p>
+      <h2>Find your next rabbit hole.</h2>
       <div class="plugin-catalog">
               <a href="plugins/absolutely-smashing/" class="plugin-card">
         <img src="assets/plugins/absolutely-smashing/absolutely smashing vst screenshot.png" alt="Sunbunny Absolutely Smashing" class="plugin-card-img">
         <div class="plugin-card-body">
           <h3>Sunbunny Absolutely Smashing</h3>
           <p>RMS and LUFS-maxxing extreme clipper — designed to get you to +3 LUFS and higher.</p>
+        </div>
+      </a>
+      <a href="plugins/ohseethree/" class="plugin-card">
+        <img src="assets/plugins/ohseethree/ohseethree-full.png" alt="Sunbunny Oh See Threee" class="plugin-card-img">
+        <div class="plugin-card-body">
+          <h3>Sunbunny Oh See Threee</h3>
+          <p>Analog-style octave divider turns any input into a layered, glitchy analog choir.</p>
         </div>
       </a>
       <a href="plugins/panoramatone/" class="plugin-card">
@@ -83,52 +121,94 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════ TRUST & SAFETY ══════════════════════════════ -->
-  <section class="trust">
+  <section class="home-music" id="music">
     <div class="container">
-      <h2>Trust &amp; Safety</h2>
-      <p>All Sunbunny plugins are independent freeware. The builds are currently
-         <strong>unsigned and unnotarized</strong>, which means your OS may show a
-         warning the first time you open them.</p>
+      <p class="eyebrow">The other side of Sunbunny</p>
+      <h2>Guitars + Pedals &rarr; Albums</h2>
+      <p class="section-lead">Jazz-influenced instrumental music, vintage vibes and shoegazey textures. Listen to the records and read the stories behind them.</p>
+      <div class="album-grid">
 
-      <div class="trust-grid">
-        <div class="trust-card">
-          <h3>⊞ Windows SmartScreen</h3>
-          <p>If Windows shows a &ldquo;Windows protected your PC&rdquo; dialog:</p>
-          <ol>
-            <li>Click <strong>More info</strong></li>
-            <li>Click <strong>Run anyway</strong></li>
-          </ol>
-        </div>
-        <div class="trust-card">
-          <h3>⌘ macOS Gatekeeper</h3>
-          <p>If macOS says the file &ldquo;can&rsquo;t be opened because it is from an
-             unidentified developer&rdquo;:</p>
-          <ol>
-            <li>Open <strong>System Settings &rarr; Privacy &amp; Security</strong></li>
-            <li>Scroll down and click <strong>Open Anyway</strong></li>
-          </ol>
-        </div>
-        <div class="trust-card">
-          <h3>🔒 Verify checksums</h3>
-          <p>Every release includes a <code>SHA256SUMS.txt</code> file. Verify your
-             download matches before installing.</p>
-        </div>
+        <!-- Poolrooms -->
+        <a href="https://distrokid.com/hyperfollow/sunbunny/cyclotopeia-swim?ref=release" target="_blank" rel="noopener" class="album-card">
+          <div class="album-art-wrapper">
+            <img src="assets/music/poolrooms.jpg" alt="Poolrooms" class="album-art" loading="lazy">
+          </div>
+          <div class="album-info">
+            <h3>Poolrooms</h3>
+            <p>I challenged myself to start an album with visual imagery as the inspiration. I generated
+               images of vibey pool rooms and then improvised to try to conjure the vibes I was feeling.
+               Bottled the juju and here we are with 2 mixtape-inspired tracks meant to just steamily
+               steep yourself inside in the background of your wet, hazy, bath-tiled, dreamy day.</p>
+          </div>
+        </a>
+
+        <!-- Susurrus Glee -->
+        <a href="https://distrokid.com/hyperfollow/sunbunny/susurrus-glee?ref=release" target="_blank" rel="noopener" class="album-card">
+          <div class="album-art-wrapper">
+            <img src="assets/music/susurrus_glee.jpg" alt="Susurrus Glee" class="album-art" loading="lazy">
+          </div>
+          <div class="album-info">
+            <h3>Susurrus Glee</h3>
+            <p>Me trying my best to make something that sounded more like &ldquo;songs&rdquo; and not a
+               meandering landscape of intensely evolving improvisation. Catchy and somewhat dancey bits
+               about, probably my most &ldquo;colorful&rdquo; and memorable tunes are in here. Quirky and
+               beat-centric, built around the most weird-yet-usable guitar sounds I could conjure at the
+               time. All guitar, bass, drums, (maybe some light vocals) and way too many effects pedals.</p>
+          </div>
+        </a>
+
+        <!-- Psychedelala -->
+        <a href="https://distrokid.com/hyperfollow/sunbunny/psychedelala-2?ref=release" target="_blank" rel="noopener" class="album-card">
+          <div class="album-art-wrapper">
+            <img src="assets/music/psychedelala.jpg" alt="Psychedelala" class="album-art" loading="lazy">
+          </div>
+          <div class="album-info">
+            <h3>Psychedelala</h3>
+            <p>This was all about capturing guitar sounds. At the time I was really into the Chase Bliss
+               Habit and Blooper and these dominate the album. I&rsquo;m always trying to use these
+               bleep-bloop machines in a song-ish context, so this is my early effort to take all my
+               bedroom sound experimentations and get them into a more listenable format. Some of these
+               definitely take you on a trip, hence the name.</p>
+          </div>
+        </a>
+
+        <!-- Fine Shiny Sunbunny Day -->
+        <a href="https://distrokid.com/hyperfollow/sunbunny/fine-shiny-sunbunny-day?ref=release" target="_blank" rel="noopener" class="album-card">
+          <div class="album-art-wrapper">
+            <img src="assets/music/fine_shiny_sunbunny_day.jpg" alt="Fine Shiny Sunbunny Day" class="album-art" loading="lazy">
+          </div>
+          <div class="album-info">
+            <h3>Fine Shiny Sunbunny Day</h3>
+            <p>This album was the first one after a long spell of not finishing anything. I decided to
+               ditch my previous vocal centered concept and just play the guitar. Long, winding epic jams
+               meant to be listenable and repeatable. I put together the most insane chain of stereo effects
+               I possibly could and limited myself to exactly 1 track each of guitar, bass, and drums to
+               see how big of a sound I could make with just a trio concept.</p>
+            <p>Most of it was recorded during a months-long struggle with insomnia; I&rsquo;d often wake
+               up at 3AM unable to get back to sleep so&hellip; I&rsquo;d zombie into my recording room
+               and get lost in pedals and improv for hours. I still really like this album&mdash;I think
+               it captured that period of my playing well.</p>
+          </div>
+        </a>
+
       </div>
-      <p class="trust-note">Unsigned/unnotarized because this is an early freeware
-         experiment. Code signing and notarization will be added if demand warrants it.</p>
     </div>
   </section>
+  </main>
 
   <!-- ════════════════════════════════ FOOTER ════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container footer-inner">
+      <nav class="footer-catalog" aria-label="Explore the plugins">
+        <h2>Explore the plugins</h2>
+        <div class="footer-catalog-links"><a href="plugins/absolutely-smashing/">Absolutely Smashing</a>
+<a href="plugins/ohseethree/">Oh See Threee</a>
+<a href="plugins/panoramatone/">Panoramatone</a>
+<a href="plugins/tentacles/">Tentacles</a></div>
+      </nav>
       <div class="footer-links">
         <a href="music.html">Music</a>
         <a href="privacy.html">Privacy</a>
-        <a href="plugins/absolutely-smashing/">Absolutely Smashing</a>
-        <a href="plugins/panoramatone/">Panoramatone</a>
-        <a href="plugins/tentacles/">Tentacles</a>
       </div>
       <p class="footer-actions">
         <button type="button" class="footer-link-button" data-open-privacy-settings hidden>Privacy Settings</button>
